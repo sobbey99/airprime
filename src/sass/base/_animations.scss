@@ -1,0 +1,10 @@
+@keyframes rotateY {
+    0% {
+        transform: rotateY(0deg) scale(1.05);
+    }
+
+    100% {
+        transform: rotateY(360deg) scale(1.2);
+        
+    }
+}

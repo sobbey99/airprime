@@ -1,11 +1,13 @@
 @import 'libs/reboot';
 @import 'libs/grid';
 @import 'libs/fonts';
-
+@import 'base/variables';
+@import 'base/animations';
 body {
     margin: 0;
     padding: 0;
     font-family: 'RedHatText', sans-serif;
+    font-weight: 400;
 }
 h1,h2,h3,h4,h5,h6,p,ul {
     margin: 0;
@@ -15,6 +17,5 @@ h1,h2,h3,h4,h5,h6,p,ul {
     box-sizing: border-box;
 }
 
-.container {
-    background-color: yellow;
-}
+@import 'blocks/promo-block';
+@import 'blocks/header-block';
