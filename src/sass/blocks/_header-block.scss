@@ -1,7 +1,9 @@
 .header {
     position: fixed;
-    background-color: red;
+    background-color: rgba(253, 253, 253, 0);
     min-width: 100vw;
+    height: 110px;
+    z-index: 5;
     &__wrapper {
         display: flex;
         justify-content: space-between;
@@ -63,7 +65,7 @@
         &__listlink {
             text-decoration: none;
             color: #000;
-            font-size: 14px;
+            font-size: 18px;
             text-transform: capitalize;
             padding: $pad $extra;
             display: inline-block;
@@ -146,23 +148,6 @@
         }
         &__call {
             margin-bottom: 10px;
-            background: #41AC58;
-            text-decoration: none;
-            border-radius: 19px 0px;
-            color: #000;
-            font-weight: 700;
-            font-size: 18px;
-            padding: 10px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: 0.4s all ease-out;
-            &:hover {
-            background: #439b56;
-                text-decoration: underline;
-                color: white;
-                transition: 0.4s all ease-out;
-            }
         }
         &__social {
             width: 100%;
@@ -171,13 +156,14 @@
             &-img {
                 width: 38px;
                 object-fit: contain;
+                transition: 0.3s all ease-in-out;
             }
             &_link {
                 text-decoration: none;
-                transform: 0.6s all linear;
+                transition: 0.3s all ease-in-out;
                 &:hover {
-                    animation: rotateY 0.6s linear 0.1s 1 normal;
-                    animation-fill-mode: normal;
+                    transform: scale(1.17) translateY(3px);
+                transition: 0.3s all ease-in-out;
                 }
             }
         }

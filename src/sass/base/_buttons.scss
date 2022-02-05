@@ -1,0 +1,40 @@
+.greenstandart {
+    background: #41AC58;
+    text-decoration: none;
+    border-radius: 19px 0px;
+    color: #000;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s all ease-out;
+    &:hover {
+    background: #439b56;
+        text-decoration: underline;
+        color: white;
+        transition: 0.4s all ease-out;
+    }
+}
+
+.greenBtn {
+    background-color: #40AC58;
+    border-radius: 5px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s all ease-in-out;
+    outline: 0;
+    outline-offset: 0;
+    border: none;
+    &:hover {
+        box-shadow: -6px 2px 8px 6px rgba(0, 0, 0, 0.25);
+        transform: scale(1.05) translateY(3px);
+                transition: 0.3s all ease-in-out;
+    }
+    &_pd8 {
+        padding: 8px 0;
+    }
+}
