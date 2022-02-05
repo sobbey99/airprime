@@ -1,0 +1,90 @@
+.about {
+    height: 100vh;
+    background-color: #B5D1EB;
+    padding-bottom: 20px;
+    position: relative;
+    z-index: 3;
+    &__bgline {
+        position: absolute;
+        right: -80px;
+        top: 20px;
+        z-index: -1;
+    }
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+    }
+    .container {
+        height: 100%;
+    }
+    &__title {
+        padding-top: 85px;
+        padding-bottom: 5px;
+        text-align: center;
+        font-size: 40px;
+        color: #000005;
+    }
+    &-descr{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 300px;
+        column-gap: 60px;
+        &__video {
+            iframe {
+                width: 100%;
+                height: 100%;
+                border-radius: 16px;
+            }
+        }
+        &__paragraph {
+            font-size: 13px;
+            list-style-image: url('../icons/listPoint.svg');
+        }
+        &__text {
+            display: grid;
+            grid-template-rows: 150px 150px;
+            row-gap: 10px;
+        }
+        &__bottom {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: end;
+        }
+        &__earth {
+            img {
+                height: 150px;
+            }
+        }
+    }
+    &-ilustrate {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 20px;
+        row-gap: 35px;
+        justify-items: center;
+        align-items: center;
+        &__item {
+            display: flex;
+            align-items: end;
+            justify-content: center;
+            &_1 {
+                background: url('../img/aboutimg1.png') center center / cover no-repeat;
+                background-size: 180%;
+            }
+            &_2 {
+                background: url('../img/aboutimg2.png') center center / cover no-repeat;
+                background-size: 180%;
+            }
+            &_3 {
+                background: url('../img/aboutimg3.png') center center / cover no-repeat;
+                background-size: 180%;
+            }
+            &_4 {
+                background: url('../img/aboutimg4.png') center center / cover no-repeat;
+                background-size: 180%;
+            }
+        }
+    }
+}

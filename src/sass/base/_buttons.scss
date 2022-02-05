@@ -5,7 +5,8 @@
     color: #000;
     font-weight: 700;
     font-size: 18px;
-    padding: 10px 20px;
+    padding: 5px 10px;
+    width: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,6 +16,9 @@
         text-decoration: underline;
         color: white;
         transition: 0.4s all ease-out;
+    }
+    &_h40 {
+        height: 40px;
     }
 }
 

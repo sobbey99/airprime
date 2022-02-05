@@ -2,6 +2,7 @@
 @import 'libs/grid';
 @import 'libs/fonts';
 @import 'libs/fullpage';
+@import 'libs/animate';
 @import 'base/variables';
 @import 'base/animations';
 @import 'base/buttons';
@@ -12,10 +13,10 @@ body {
     font-family: 'RedHatText', sans-serif;
     font-weight: 400;
     overflow: hidden;
-    ::selection {
-        background: rgba(0, 0, 0, 0); /* Цвет фона */
-        color: #fff; /* Цвет текста */
-       }
+    // ::selection {
+    //     background: rgba(0, 0, 0, 0); /* Цвет фона */
+    //     color: #fff; /* Цвет текста */
+    //    }
 }
 h1,h2,h3,h4,h5,h6,p,ul {
     margin: 0;
@@ -27,8 +28,4 @@ h1,h2,h3,h4,h5,h6,p,ul {
 
 @import 'blocks/promo-block';
 @import 'blocks/header-block';
-
-.blubla {
-    height: 100vh;
-    background-color: blue;
-}
+@import 'blocks/about-block';

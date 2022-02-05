@@ -5,3 +5,8 @@ $thick : 2px;
 $pad : 0.37em;
 $extra : calc(#{$pad} * 1.2);
 $color : #41ac58;
+
+$primary-color: 
+rgba(251, 0, 0, 0.54);
+$easing: all 0.5s cubic-bezier(.55,0,.1,1);
+$base-size: 10rem;

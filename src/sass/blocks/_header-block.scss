@@ -1,14 +1,17 @@
 .header {
     position: fixed;
-    background-color: rgba(253, 253, 253, 0);
     min-width: 100vw;
-    height: 110px;
+    height: 90px;
     z-index: 5;
+    transition: 100ms all linear;
+    .container {
+      height: 100%;
+    }
     &__wrapper {
+      height: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 0 13px 0;
     }
     &-nav {
         width: 30%;
@@ -137,35 +140,55 @@
 
     }
     &-contact {
-        width: 40%;
+        width: 50%;
         display: flex;
         flex-direction: column;
         align-items: end;
         &__wrapper {
             display: flex;
-        flex-direction: column;
-            align-items: center;
-        }
-        &__call {
-            margin-bottom: 10px;
+            justify-content: space-between;
         }
         &__social {
             width: 100%;
             display: flex;
             justify-content: space-evenly;
             &-img {
-                width: 38px;
-                object-fit: contain;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 45px;
+                object-fit: cover;
                 transition: 0.3s all ease-in-out;
+                border-radius: 50%;
+                border: 3px solid #41ac58;
+                &_blue {
+                  border: 3px solid #0085ff;
+                }
+                &_purple {
+                  border: 3px solid purple;
+                }
             }
             &_link {
+              display: flex;
+                align-items: center;
+                justify-content: center;
                 text-decoration: none;
-                transition: 0.3s all ease-in-out;
+                transition: 0.61s all ease-in-out;
                 &:hover {
-                    transform: scale(1.17) translateY(3px);
-                transition: 0.3s all ease-in-out;
+                    transform: scale(1.2) translateY(-5px) rotateY(360deg);
+                transition: 0.61s all ease-in-out;
                 }
             }
         }
+    }
+    &_bg{
+    transition: 100ms all linear;
+
+      /* From https://css.glass */
+background: rgba(255, 255, 255, 0.97);
+border-radius: 0 0 22px 22px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(0px);
+-webkit-backdrop-filter: blur(0px);
     }
 }

@@ -68,4 +68,66 @@ new fullpage('#fullpage', {
   navigation: true,
   navigationTooltips: ['Главная', 'Что такое рекуператор?'],
 	showActiveTooltip: false,
+  v2compatible: true
 });
+////////
+
+/*WoW */
+var wow = new WOW(
+  {
+    boxClass:     'wow',      // animated element css class (default is wow)
+    animateClass: 'animated', // animation css class (default is animated)
+    offset:       0,          // distance to the element when triggering the animation (default is 0)
+    mobile:       true,       // trigger animations on mobile devices (default is true)
+    live:         true,       // act on asynchronously loaded content (default is true)
+    callback:     function(box) {
+      // the callback is fired every time an animation is started
+      // the argument that is passed in is the DOM node being animated
+    },
+    scrollContainer: null,    // optional scroll container selector, otherwise use window,
+    resetAnimation: true,     // reset animation on end (default is true)
+  }
+);
+wow.init();
+
+
+
+// выбираем нужный элемент
+const target = document.querySelector('.promo');
+const header = document.querySelector('.header');
+var changer = 0;
+let promo = target.classList;
+for (const i of promo) {
+  if (i == "active") {
+    header.classList.remove('header_bg');
+  }
+}
+
+// создаем новый экземпляр наблюдателя
+const observer = new MutationObserver(function(mutations) {
+  mutations.forEach(function(mutation) {
+    changer = mutation.target.classList;
+    for (let i  of changer) {
+      if (i == "fp-completely") {
+        header.classList.remove('header_bg');
+      } 
+      if (i !== "fp-completely") {
+        header.classList.add('header_bg');
+      }
+    }
+
+  });    
+});
+ 
+// создаем конфигурации для наблюдателя
+const config = { attributes: true, childList: true, characterData: true };
+ 
+// запускаем механизм наблюдения
+observer.observe(target,  config);
+
+// позже, если надо, прекращаем наблюдение
+// observer.disconnect();
+
+const targetAbout = document.querySelector('.about');
+const targetAboutClasses = targetAbout.classList;
+console.log(targetAboutClasses);
