@@ -42,6 +42,12 @@ function moveBackground() {
     'transform': translate
   });
 
+  $('.advantages_bg').css({
+    '-webit-transform': translate,
+    '-moz-transform': translate,
+    'transform': translate
+  });
+
   window.requestAnimationFrame(moveBackground);
 }
 
@@ -128,6 +134,132 @@ observer.observe(target,  config);
 // позже, если надо, прекращаем наблюдение
 // observer.disconnect();
 
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 const targetAbout = document.querySelector('.about');
+const titleAbout = document.querySelector('.about__title');
+const aboutVideo = document.querySelector('.about-descr__video');
+const aboutText = document.querySelector('.about-descr__text');
+const aboutIlustrate = document.querySelector('.about-ilustrate');
+
+
+
+
 const targetAboutClasses = targetAbout.classList;
-console.log(targetAboutClasses);
+var changerAbout = 0;
+
+ 
+// создаем новый экземпляр наблюдателя
+const observerAbout = new MutationObserver(function(mutations) {
+  mutations.forEach(function(mutation) {
+    changerAbout =  mutation.target.classList;
+    for (let i of changerAbout) {
+      if (i == 'active') {
+          titleAbout.classList.add('animate__backInDown');
+          titleAbout.classList.add('animate__animated');
+
+          aboutVideo.classList.add('animate__fadeInLeft');
+          aboutVideo.classList.add('animate__animated');
+
+
+
+          aboutText.classList.add('animate__fadeInRight');
+          aboutText.classList.add('animate__animated');
+
+          aboutIlustrate.classList.add('animate__fadeInUpBig');
+          aboutIlustrate.classList.add('animate__animated');
+
+
+
+          break;
+      }
+      if (i !== 'active') {
+          titleAbout.classList.remove('animate__backInDown');
+          titleAbout.classList.remove('animate__animated');
+
+          aboutVideo.classList.remove('animate__fadeInLeft');
+          aboutVideo.classList.remove('animate__animated');
+
+
+
+          aboutText.classList.remove('animate__fadeInRight');
+          aboutText.classList.remove('animate__animated');
+
+          aboutIlustrate.classList.remove('animate__fadeInUpBig');
+          aboutIlustrate.classList.remove('animate__animated');
+
+      }
+    }
+  });    
+});
+ 
+// создаем конфигурации для наблюдателя
+var configAbout = { attributes: true, childList: true, characterData: true };
+ 
+// запускаем механизм наблюдения
+observerAbout.observe(targetAbout,  configAbout);
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// выбираем нужный элемент
+const targetAdvantage = document.querySelector('.advantages');
+const advantageItemOne = document.querySelector('.advantages-wrapper__item_1');
+const advantageItemTwo = document.querySelector('.advantages-wrapper__item_2');
+const advantageItemThree = document.querySelector('.advantages-wrapper__item_3');
+const advantageTitle = document.querySelector('.advantages__title');
+var changerAdvantage = 0;
+
+
+// создаем новый экземпляр наблюдателя
+var observerAdvantage = new MutationObserver(function(mutations) {
+  mutations.forEach(function(mutation) {
+    changerAdvantage = mutation.target.classList;
+    for (let i  of changerAdvantage) {
+      if (i == "active") {
+        advantageTitle.classList.add('animate__animated');
+        advantageTitle.classList.add('animate__fadeInDownBig');
+
+        advantageItemOne.classList.add('animate__delay-0s');
+        advantageItemOne.classList.add('animate__lightSpeedInRight');
+        advantageItemOne.classList.add('animate__animated');
+
+        advantageItemTwo.classList.add('animate__delay-1s');
+        advantageItemTwo.classList.add('animate__lightSpeedInRight');
+        advantageItemTwo.classList.add('animate__animated');
+
+        advantageItemThree.classList.add('animate__delay-2s');
+        advantageItemThree.classList.add('animate__lightSpeedInRight');
+        advantageItemThree.classList.add('animate__animated');
+        
+
+        break;
+      }
+
+      if (i !== 'active') {
+        advantageTitle.classList.remove('animate__animated');
+        advantageTitle.classList.remove('animate__fadeInDownBig');
+
+        advantageItemOne.classList.remove('animate__lightSpeedInRight');
+        advantageItemOne.classList.remove('animate__animated');
+        advantageItemOne.classList.remove('animate__delay-0s');
+
+        advantageItemTwo.classList.remove('animate__delay-1s');
+        advantageItemTwo.classList.remove('animate__lightSpeedInRight');
+        advantageItemTwo.classList.remove('animate__animated');
+
+        advantageItemThree.classList.remove('animate__delay-2s');
+        advantageItemThree.classList.remove('animate__lightSpeedInRight');
+        advantageItemThree.classList.remove('animate__animated');
+      }
+    }
+  });    
+});
+ 
+// создаем конфигурации для наблюдателя
+var configAdvantage = { attributes: true, childList: true, characterData: true };
+ 
+// запускаем механизм наблюдения
+observerAdvantage.observe(targetAdvantage,  configAdvantage);

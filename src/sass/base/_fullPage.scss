@@ -1,3 +1,7 @@
 #fp-nav ul li a span, .fp-slidesNav ul li a span {
-    background-color: #fff;
+    background-color: #41ac58;
+}
+
+#fp-nav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li a.active span, .fp-slidesNav ul li:hover a.active span {
+    background-color: #0085ff;
 }
