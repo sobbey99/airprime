@@ -137,7 +137,7 @@ observer.observe(target,  config);
 
 
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////ABOUT WATCHING/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 const targetAbout = document.querySelector('.about');
 const titleAbout = document.querySelector('.about__title');
 const aboutVideo = document.querySelector('.about-descr__video');
@@ -202,9 +202,10 @@ var configAbout = { attributes: true, childList: true, characterData: true };
 observerAbout.observe(targetAbout,  configAbout);
 
 
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// выбираем нужный элемент
+// выбираем нужный элемент / ADVANTAGES WATCHING
 const targetAdvantage = document.querySelector('.advantages');
 const advantageItemOne = document.querySelector('.advantages-wrapper__item_1');
 const advantageItemTwo = document.querySelector('.advantages-wrapper__item_2');
@@ -263,3 +264,54 @@ var configAdvantage = { attributes: true, childList: true, characterData: true }
  
 // запускаем механизм наблюдения
 observerAdvantage.observe(targetAdvantage,  configAdvantage);
+
+
+
+
+
+// EDGE WATCHING ! выбираем нужный элемент
+const targetEdge = document.querySelector('.edge');
+const edgeItem = document.querySelector('.edge__wrapper');
+var edgeChanger = 0;
+
+ 
+// создаем новый экземпляр наблюдателя
+var observerEdge = new MutationObserver(function(mutations) {
+  mutations.forEach(function(mutation) {
+    edgeChanger = mutation.target.classList;
+    for (let i of edgeChanger) {
+        if (i == 'active') {
+            edgeItem.classList.add('animate__animated');
+            edgeItem.classList.add('animate__delay-1s');
+            edgeItem.classList.add('animate__bounceIn');
+
+
+         
+          break;
+        }
+
+        if (i !== "active") {
+          edgeItem.classList.remove('animate__animated');
+            edgeItem.classList.remove('animate__delay-1s');
+            edgeItem.classList.remove('animate__bounceIn');
+        }
+    }
+  });    
+});
+ 
+// создаем конфигурации для наблюдателя
+var configEdge = { attributes: true, childList: true, characterData: true };
+ 
+// запускаем механизм наблюдения
+observerEdge.observe(targetEdge,  configEdge);
+
+
+   /**
+ VANILA TILT JS
+ */
+
+ VanillaTilt.init(document.querySelectorAll(".edge-item"), {
+  max: 30,
+  speed: 700
+});
+ 

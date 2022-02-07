@@ -1,0 +1,55 @@
+.edge {
+    height: 100vh;
+    background-color: #b5d1eb;
+    z-index: 5;
+    position: relative;
+    .container {
+        height: 100%;
+    }
+    &__wrapper {
+        padding-top: 120px;
+        padding-bottom: 40px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 260px 260px;
+        column-gap: 80px;
+        row-gap: 50px;
+    }
+    &-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 10px 40px 10px;
+        border-radius: 5px;
+        background-color: #fff;
+        box-shadow: 10px 10px 13px rgba(0, 0, 0, 0.25);
+        text-align: center;
+        transform-style: preserve-3d;
+        transform: perspective(1000px);
+        &__img {
+            transform: translateZ(70px);
+        }
+        &__title {
+            font-size: 24px;
+            transform: translateZ(30px);
+        }
+        &__text {
+            font-size: 14px;
+            transform: translateZ(30px);
+            padding: 0 10px;
+        }
+    }
+    &__bgline {
+        position: absolute;
+        z-index: -1;
+        &_right {
+            top: 0;
+            right: -120px;
+        }
+        &_left {
+            top: -15px;
+            left: -560px;
+        }
+    }
+}

@@ -3,8 +3,10 @@
     position: relative;
     &__title {
         text-align: center;
-        padding-top: 100px;
-        padding-bottom: 20px;
+        position: absolute;
+        font-size: 40px;
+        left: 50px;
+        top: 40%;
     }
     &_bg {
         background: url('../img/advantagesBg.jpg') center center/ contain no-repeat;
@@ -16,11 +18,14 @@
         z-index: -1;
     }
     &-wrapper {
+        padding-top: 100px;
+        padding-bottom: 20px;
         height: 100%;
         display: grid;
         grid-template-rows: repeat(3, 130px);
         grid-template-columns: repeat(6, 1fr);
         row-gap: 50px;
+        position: relative;
         &__title {
             font-size: 18px;
             font-weight: 500;
