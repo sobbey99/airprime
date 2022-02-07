@@ -72,7 +72,7 @@ new fullpage('#fullpage', {
 	autoScrolling:true,
 	scrollHorizontally: false,
   navigation: true,
-  navigationTooltips: ['Главная', 'Что такое рекуператор?'],
+  navigationTooltips: ['Главная', 'Что такое рекуператор?', 'Преимущества', 'Выгода', 'Каталог'],
 	showActiveTooltip: false,
   v2compatible: true
 });

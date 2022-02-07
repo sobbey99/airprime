@@ -5,3 +5,15 @@
 #fp-nav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li a.active span, .fp-slidesNav ul li:hover a.active span {
     background-color: #0085ff;
 }
+
+#fp-nav ul li .fp-tooltip.fp-right {
+    color: #41ac58;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+#fp-nav ul li .fp-tooltip {
+    top: 50%;
+    transform: translateY(-50%);
+}
