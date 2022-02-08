@@ -1,3 +1,21 @@
+
+/*
+Loader
+*/
+const maskLoad = document.querySelector('.loading');
+window.addEventListener('load', () => {
+  maskLoad.classList.add('hide');
+  setTimeout(
+    () => {
+      maskLoad.remove();
+    }, 600
+  );
+});
+
+
+
+
+
 /*
 Animate Words
 */
