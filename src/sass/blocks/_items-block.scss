@@ -1,0 +1,153 @@
+.items {
+    padding-top: 100px;
+    position: relative;
+    background-color: #B5D1EB;
+    z-index: 2;
+    &__title {
+        text-align: center;
+        font-size: 40px;
+        padding-top: 15px;
+    }
+    &__bgline{
+        position: absolute;
+        z-index: -1;
+        right: 90px;
+        top: 0;
+    }
+    &__descr {
+        font-size: 14px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    &-section {
+        &__title {
+            font-weight: 500;
+            font-size: 18px;
+            position: relative;
+            transform: translateX(15px);
+            margin-top: 10px;
+            margin-bottom: 15px;
+            padding: 15px 0;
+            &::before {
+                content: '';
+                display: block;
+                width: 5px;
+                height: 30px;
+                background-color: #41AC58;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: -15px;
+            }
+        }
+        &__wrapper {
+            display: grid;
+            grid-template-rows: 420px;
+            grid-auto-rows: 420px;
+            grid-template-columns: repeat(4, 1fr);
+            column-gap: 40px;
+            row-gap: 80px;
+        }
+
+    }
+    &-advantages {
+        color: #fff;
+        font-size: 14px;
+        text-align: center;
+        background-color: #0085FF;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(10, 1fr);
+        column-gap: 5px;
+        padding-top: 10px;
+        border-radius: 25px;
+        &__text {
+            font-size: 12px;
+            text-align: center;
+            padding: 5px 6px 0 6px;
+        }
+        &__img {
+            transition: 0.41s all linear;
+        }
+        &__divide {
+            &:hover {
+                .items-advantages__img {
+                    transform: scale(1.2) translateY(-5px) rotateY(360deg);
+            transition: 0.41s all linear;
+                }
+            }
+        }
+    }
+    &-product{
+        transform-style: preserve-3d;
+        transform: perspective(1000px);
+        transform: translateZ(20px);
+            border: 2px solid #BC9F5E;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 12px;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            justify-items: center;
+        border-radius: 20px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+
+        
+        &__top {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 30px 0;
+            background-color: #fff;
+        border-radius: 20px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+
+
+        }
+        &__bottom {
+
+
+            width: 100%;
+            background-color: #0085FF;
+            &_wrapper {
+                padding-top: 5px;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                justify-items: center;
+                row-gap: 5px;
+                
+            }
+            &_line {
+                padding-top: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            &_About {
+                p {
+                    text-align: center;
+                }
+            }
+        }
+        &__title {
+            font-family: 'RedHatText', sans-serif;
+            font-weight: 500;
+            font-size: 18px;
+        }
+        &:hover {
+            box-shadow: 9px 19px 5px 2px rgba(0,0,0,0.56);
+            .items-product__top img {
+                transition: .4s all linear;
+                transform: scale(1.17);
+            }
+        }
+    }
+}
+
+.animate-typing[data-animate-index="0"]::after {
+    content: '' !important; 
+}
