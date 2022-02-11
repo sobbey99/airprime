@@ -1,0 +1,150 @@
+@media  screen and (max-width: 1200px) {
+    //PROMO START
+    .promo__heading {
+        font-size: 60px;
+    }
+
+    .promo__heading .bottom {
+        font-size: 35px;
+    }
+
+    .promo-form__title {
+        font-size: 35px;
+    }
+
+    .header-nav__listlink {
+        font-size: 16px;
+    }
+
+    .greenstandart {
+        font-size: 16px;
+        width: 300px;
+    }
+
+     //PROMO END
+
+
+     //ABOUT START 
+     .about__title {
+         font-size: 35px;
+     }
+
+     .about-descr__earth img {
+         height: 105px;
+     }
+     .about-descr {
+         column-gap: 30px;
+     }
+     .badge {
+         width: 8rem;
+         height: 8rem;
+     }
+
+     .badge .text {
+         width: 4rem;
+         height: 4rem;
+         line-height: 4rem;
+         margin-left: -3.5rem;
+        font-size: 0;
+     }
+     //ABOUT END
+
+     //ADVANTAGES START
+     .advantages__title {
+         font-size: 35px;
+         top: 25%;
+     }
+     .advantages-wrapper__title {
+         font-size: 14px;
+     }
+     //ADVANTAGES END
+
+     //EDGE START 
+     .edge__wrapper {
+         align-content: center;
+         height: 100%;
+         column-gap: 60px;
+         row-gap: 30px;
+     }
+     .edge-item__title {
+         font-size: 21px;
+     }
+
+     //EDGE END
+
+
+     //CATALOG START
+     .catalog-divide {
+         grid-template-columns: repeat(2, 1fr);
+     }
+     .catalog-divide__decor, .catalog-divide__item_3 {
+         display: none;
+     }
+     //CATALOG END
+
+     //INSTALL START
+     .install__title {
+         font-size: 35px;
+     }
+     .install__wrapper {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        grid-template-rows: 1fr;
+        height: 100%;
+     }
+     .install-descr__bottom ul {
+         font-size: 14px;
+         row-gap: 5px;
+        column-gap: 5px;
+     }
+     .install-img {
+         position: absolute;
+         z-index: -1;
+         top: 50%;
+    transform: translateY(-50%);
+    filter: saturate(3) contrast(1);
+     }
+     .install-descr__top{
+        font-weight: 900;
+        padding: 0 2rem;
+         li {
+            margin: 10px 0;
+
+         }
+     }
+     .install-descr {
+         justify-content: space-evenly;
+     }
+     //INSTALL END
+
+
+     //QUESTIONS START
+
+     .questions-bgline_right {
+         height: 100rem;
+         width: 100rem;
+     }
+     //QUESTIONS END
+
+
+
+     //ITEMS START 
+     .items-section__wrapper {
+         grid-template-columns: repeat(3, 1fr);
+     }
+     .items__title {
+         font-size: 35px;
+     }
+}
+
+@media  screen and (max-width: 991px) {
+    
+}
+
+@media  screen and (max-width: 776px) {
+    
+}
+
+@media  screen and (max-width: 575px) {
+    
+}

@@ -1,12 +1,5 @@
 .footer {
     width: 100vw;
-    height: 80px;
-    position: absolute;
-    bottom: 150px;
-    .container {
-        display: grid;
-        grid-template-rows: 1fr 1fr 1fr;
-    }
     &__wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
