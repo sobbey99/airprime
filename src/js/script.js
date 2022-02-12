@@ -1,4 +1,11 @@
 
+
+
+
+
+
+
+
 /*
 Loader
 */
@@ -11,6 +18,17 @@ window.addEventListener('load', () => {
     }, 600
   );
 });
+
+//HAMBURGER
+const hamburgerElement = document.querySelector('.hamburger');
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+
+hamburgerElement.addEventListener('click', function(){
+hamburgerMenu.classList.add('hamburger-menu_active');
+});
+
+
+
 
   /**
  VANILA TILT JS

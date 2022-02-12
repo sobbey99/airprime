@@ -4,7 +4,6 @@
 
 
 
-
 /*
 Loader
 */
@@ -19,6 +18,18 @@ window.addEventListener('load', () => {
 
   setTimeout(
     () => {
+//HAMBURGER
+const hamburgerElement = document.querySelector('.hamburger');
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+
+hamburgerElement.addEventListener('click', function(){
+  hamburgerMenu.classList.add('hamburger-menu_active');
+});
+
+
+
+
+
 // выбираем нужный элемент
 const target = document.querySelector('.promo');
 const header = document.querySelector('.header');

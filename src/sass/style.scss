@@ -9,6 +9,10 @@
 @import 'base/buttons';
 @import 'base/fullPage';
 @import 'base/loading';
+header.header .container-mobile {
+    display: none;
+}
+
 
 body {
     margin: 0;
