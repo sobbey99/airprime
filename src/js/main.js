@@ -18,13 +18,6 @@ window.addEventListener('load', () => {
 
   setTimeout(
     () => {
-//HAMBURGER
-const hamburgerElement = document.querySelector('.hamburger');
-const hamburgerMenu = document.querySelector('.hamburger-menu');
-
-hamburgerElement.addEventListener('click', function(){
-  hamburgerMenu.classList.add('hamburger-menu_active');
-});
 
 
 
@@ -146,7 +139,6 @@ new fullpage('#fullpage', {
 autoScrolling:true,
 scrollHorizontally: false,
 navigation: true,
-navigationTooltips: ['Главная', 'Что такое рекуператор?', 'Преимущества', 'Выгода', 'Каталог', 'Монтаж', 'Связаться'],
 showActiveTooltip: false,
 v2compatible: true
 });
@@ -342,6 +334,41 @@ var configEdge = { attributes: true, childList: true, characterData: true };
 
 // запускаем механизм наблюдения
 observerEdge.observe(targetEdge,  configEdge);
+
+
+
+//HAMBURGER
+const hamburgerElement = document.querySelector('.hamburger');
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const hamburgerClose = document.querySelector('.hamburger-menu_close');
+const navFullPage = document.querySelector('#fp-nav.fp-right');
+const navList = document.querySelectorAll('.hamburger-menu nav.list ul li');
+
+
+hamburgerElement.addEventListener('click', function(){
+  hamburgerMenu.classList.add('hamburger-menu_active');
+  navFullPage.classList.add('fp-right_none');
+  navList.forEach(
+    function(ele) {
+      ele.classList.add('animate__fadeInUp');
+    }
+  );
+  
+
+});
+
+hamburgerClose.addEventListener('click', function(){
+  hamburgerMenu.classList.remove('hamburger-menu_active');
+  navFullPage.classList.remove('fp-right_none');
+
+});
+
+
+
+
+
+
+
 
     }, 500
   );

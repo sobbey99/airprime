@@ -12,7 +12,17 @@
 header.header .container-mobile {
     display: none;
 }
-
+.promo__logo_mobile {
+    display: none;
+}
+.fp-right {
+    &_none {
+        display: none;
+    }
+}
+.promo-orderCall, .about__title_mobile, .escape {
+    display: none;
+}
 
 body {
     margin: 0;
