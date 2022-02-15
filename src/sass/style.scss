@@ -20,8 +20,12 @@ header.header .container-mobile {
         display: none;
     }
 }
-.promo-orderCall, .about__title_mobile, .escape {
+.promo-orderCall, .about__title_mobile {
     display: none;
+}
+
+.escape, .edge-mobile{
+    display: none !important;
 }
 
 body {

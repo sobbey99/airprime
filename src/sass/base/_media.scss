@@ -102,10 +102,14 @@
         grid-template-rows: 1fr;
         height: 100%;
      }
+     .install-descr__bottom {
+         display: flex;
+         justify-content: center;
+     }
      .install-descr__bottom ul {
          font-size: 14px;
          row-gap: 5px;
-        column-gap: 5px;
+        column-gap: 10px;
      }
      .install-img {
          position: absolute;
@@ -471,7 +475,7 @@
     //START ESCAPE
 
     .escape {
-        display: flex;
+        display: flex !important;
         .container {
             height: 100%;
             position: relative;
@@ -482,16 +486,15 @@
         }
         &__title {
             font-family: 'Roboto', sans-serif;
-            font-weight: 400;
             position: relative;
             display: flex;
             align-items: center;
             justify-content:  center;
             font-size: 35px;
-    line-height: 30px;
-    font-weight: 700;
-    position: absolute;
-    top: 115px;
+            line-height: 30px;
+            font-weight: 700;
+            position: absolute;
+            top: 115px;
             span {
                 display: block;
                 border-style: solid;
@@ -544,6 +547,109 @@
             width: 80%;
             position: relative;
 
+        }
+    }
+    //END ESCAPE
+
+
+    //START ADVANTAGES
+    .advantages {
+        &_bg {
+            background: url('../img/advantages_bg_mobile.jpg') center center /cover no-repeat;
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(15px);
+            }
+        }
+        &__title {
+            font-family: 'Roboto', sans-serif;
+            font-size: 35px;
+            line-height: 30px;
+            font-weight: 700;
+            width: 100vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+        }
+        &-wrapper {
+            font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+            color: #fff;
+            padding-bottom: 0;
+            &__item {
+                grid-column-start: 1;
+    grid-column-end: 8;
+    background: url('../img/advantagesItemBg_mobile.svg') center center /cover no-repeat;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+            }
+            &__list {
+                color: #000;
+                list-style-image: url('../icons/listPointWhite.svg');
+            }
+            &__title {
+                font-size: 18px;
+                &_2 {
+                        font-size: 14px;
+                    max-width: 40%;
+                    color: #000;
+                    &:before {
+                        top: -18%;
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    //END ADVANTAGES
+
+    //START EDGE
+    .edge {
+        display: none;
+        &-mobile {
+            .container {
+                height: 100%;
+            }
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            display: flex !important;
+            &-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.5);
+                width: 80%;
+                padding: 1.5rem;
+                &__title {
+                    font-size: 18px;
+                }
+                &__text {
+                    font-size: 14px;
+                    text-align: center;
+                }
+            }
+            
+            &__wrapper {
+                padding-top: calc(70px + 1.5rem);
+                padding-bottom: 1.5rem;
+                height: 100%;
+                display: grid;
+                grid-template-columns: 1fr;
+                row-gap: 2rem;
+                justify-items: center;
+            }
         }
     }
 }

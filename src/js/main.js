@@ -18,7 +18,38 @@ window.addEventListener('load', () => {
 
   setTimeout(
     () => {
+      const escapeSection = document.querySelector('.escape');
+      const edgePC = document.querySelector('.edge');
+      const edgeMobile1 = document.querySelector('.edge-mobile_1');
+      const edgeMobile2 = document.querySelector('.edge-mobile_2');
 
+      function myEscape() {
+        if($(window).width() < 777)
+        {   
+            edgePC.classList.remove('section');
+            escapeSection.classList.add('section');
+            edgeMobile1.classList.add('section');
+            edgeMobile2.classList.add('section');
+
+        }
+        else
+        {
+          escapeSection.classList.remove('section');
+          edgePC.classList.add('section');
+          edgeMobile1.classList.remove('section');
+            edgeMobile2.classList.remove('section');
+
+
+        }
+    }
+    
+    //вызываем
+    myEscape();
+    
+    //ну и при ресайзе перепроверяем
+    $(window).resize(function() {
+      myEscape();
+    });
 
 
 
@@ -244,17 +275,25 @@ mutations.forEach(function(mutation) {
       advantageTitle.classList.add('animate__animated');
       advantageTitle.classList.add('animate__fadeInDownBig');
 
-      advantageItemOne.classList.add('animate__delay-0s');
+      advantageItemOne.classList.add('animate__delay-1s');
       advantageItemOne.classList.add('animate__lightSpeedInRight');
       advantageItemOne.classList.add('animate__animated');
+      advantageItemOne.classList.add('animate__faster');
 
-      advantageItemTwo.classList.add('animate__delay-1s');
+      
+
       advantageItemTwo.classList.add('animate__lightSpeedInRight');
       advantageItemTwo.classList.add('animate__animated');
+      advantageItemTwo.classList.add('animate__fast');
+      advantageItemTwo.classList.add('animate__delay-1s');
 
-      advantageItemThree.classList.add('animate__delay-2s');
+
       advantageItemThree.classList.add('animate__lightSpeedInRight');
       advantageItemThree.classList.add('animate__animated');
+      advantageItemThree.classList.add('animate__slow');
+      advantageItemThree.classList.add('animate__delay-1s');
+
+
       
 
       break;
@@ -266,13 +305,13 @@ mutations.forEach(function(mutation) {
 
       advantageItemOne.classList.remove('animate__lightSpeedInRight');
       advantageItemOne.classList.remove('animate__animated');
-      advantageItemOne.classList.remove('animate__delay-0s');
+      advantageItemOne.classList.remove('animate__delay-1s');
+      advantageItemOne.classList.remove('animate__faster');
 
-      advantageItemTwo.classList.remove('animate__delay-1s');
+
       advantageItemTwo.classList.remove('animate__lightSpeedInRight');
       advantageItemTwo.classList.remove('animate__animated');
 
-      advantageItemThree.classList.remove('animate__delay-2s');
       advantageItemThree.classList.remove('animate__lightSpeedInRight');
       advantageItemThree.classList.remove('animate__animated');
     }
@@ -290,50 +329,6 @@ observerAdvantage.observe(targetAdvantage,  configAdvantage);
 
 
 
-// EDGE WATCHING ! выбираем нужный элемент
-const targetEdge = document.querySelector('.edge');
-const edgeItem = document.querySelector('.edge__wrapper');
-
-
-
-var edgeChanger = 0;
-
-
-// создаем новый экземпляр наблюдателя
-var observerEdge = new MutationObserver(function(mutations) {
-mutations.forEach(function(mutation) {
-  edgeChanger = mutation.target.classList;
-  for (let i of edgeChanger) {
-      if (i == 'active') {
-          edgeItem.classList.add('animate__animated');
-          edgeItem.classList.add('animate__delay-1s');
-          edgeItem.classList.add('animate__bounceIn');
-
-          setTimeout(() => {
-            //ANIMATE SVG 1
-            edgeImg1.classList.add('edge-item__img_1-activated');
-
-          }, 1100);
-          break;
-          
-
-        
-      }
-
-      if (i !== "active") {
-        edgeItem.classList.remove('animate__animated');
-          edgeItem.classList.remove('animate__delay-1s');
-          edgeItem.classList.remove('animate__bounceIn');
-      }
-  }
-});    
-});
-
-// создаем конфигурации для наблюдателя
-var configEdge = { attributes: true, childList: true, characterData: true };
-
-// запускаем механизм наблюдения
-observerEdge.observe(targetEdge,  configEdge);
 
 
 
