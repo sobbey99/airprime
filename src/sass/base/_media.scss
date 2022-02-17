@@ -743,6 +743,7 @@ border-radius: 15px;
 
     // START INSTALL
     .install {
+        background-color: #fff;
         &-descr{
             grid-row-start: 2;
             grid-row-end: 3;
@@ -761,7 +762,6 @@ border-radius: 15px;
             grid-template-columns: 1fr;
             grid-template-rows: 1fr;
             row-gap: 20px;
-            padding-bottom: 20px;
         }
         &-img {
             position: relative;
@@ -808,7 +808,9 @@ border-radius: 15px;
                     background-color: #fff;
                 }
                }
-
+               button {
+                   font-weight: 700;
+               }
             }
             &__descr {
                 width: 50%;
