@@ -3,6 +3,8 @@
 @import 'libs/fonts';
 @import 'libs/fullpage';
 @import 'libs/animate';
+@import 'libs/owlCarousel';
+@import 'libs/owlThemeDefault';
 @import 'base/variables';
 @import 'base/mixins';
 @import 'base/animations';
@@ -30,6 +32,10 @@ header.header .container-mobile {
 
 .catalog .catalog__wrapper-mobile {
     display: none !important; 
+}
+
+.promo__wrapper-mobile {
+    display: none;
 }
 
 body {

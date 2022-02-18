@@ -9,15 +9,33 @@ Loader
 */
 const maskLoad = document.querySelector('.loading');
 window.addEventListener('load', () => {
-  maskLoad.classList.add('hide');
+  setTimeout(() => {
+    maskLoad.classList.add('hide');
+  } , 1200);
+
   setTimeout(
     () => {
       maskLoad.remove();
-    }, 600
+    }, 1200
   );
 
   setTimeout(
     () => {
+
+//Slider for Promo Mobile Section
+$(".owl-carousel").owlCarousel({
+  items: 1,
+  loop: true,
+  nav: true,
+  rewind: false,
+  dots: true,
+  autoplay: true,
+  autoplayTimeout: 7500,
+  pullDrag: false,
+  touchDrag: false
+});
+
+
       const escapeSection = document.querySelector('.escape');
       const edgePC = document.querySelector('.edge');
       const edgeMobile1 = document.querySelector('.edge-mobile_1');

@@ -248,6 +248,7 @@
 }
 // DONE
 @media  screen and (max-width: 776px) {
+    //header
     .hamburger {
         width: 40px;
         span {
@@ -285,6 +286,7 @@
                     text-decoration: none;
                     display: flex;
                     padding: 10px 0;
+                    margin-right: 20px;
                 }
                 .greenstandart {
                     min-width: 125px;
@@ -359,67 +361,108 @@
                 
             }
         }
-    }
-    .promo__logo {
-        display: none;
-        &_mobile {
+        .header-right {
             display: flex;
-            svg {
-                z-index: 5000;
-                width: 100vw;
-            height: 150px;
-            }
+            align-items: center;
+        }
+        .header-left svg {
+            display: block;
+            text-decoration: none;
+            width: 60px;
+    height: 100%;
         }
     }
-    .promo__heading {
-        .word {
-            color: #0085FF;
-            font-size: 45px;
-        }
-        .bottom {
-            color: #fff;
-            font-size: 30px;
-        }
-        .colorfull {
-            color: #25D366;
-            font-weight: 700;
-        }
-    }
-    .promo-grid{
-        grid-template-columns: repeat(2, 1fr);
-        row-gap: 10px;
-        .promo-grid__descr {
-            color: #fff;
-        }
-    }
-    .promo-form{
+    //header end
+
+//promo start
+.promo {
+    position: relative;
+    .container {
         display: none;
     }
-    .promo-orderCall{
+    &-bg{
+        display: none;
+    }
+    &__wrapper{
+        display: none;
+        &-mobile {
+            display: flex !important;
+            height: 100%;
+        }
+    }
+    
+    &__mobileSlide{
+        background: url('../img/promoMobile_bg_1.png') center center/ cover no-repeat;
+        width: 100vw;
+        height: 110vh;
+        padding-top: 110px;
+        .container {
+            display: block;
+        }
+        &_2 {
+        background: url('../img/promoMobile_bg_2.png') center center/ cover no-repeat;
+        }
+        &_3 {
+        background: url('../img/promoMobile_bg_3.png') center center/ cover no-repeat;
+        }
+        &_4 {
+        background: url('../img/promoMobile_bg_3.png') center center/ cover no-repeat;
+
+        }
+    }
+    .slide__title {
+        background-color: #25D366;
+        color: #fff;
+        display: flex;
+        width: 90%;
+        text-transform: uppercase;
+        font-size: 28px;
+        margin: 0 auto;
+        border-radius: 50px;
+        padding: 45px 12px;
+        align-items: center;
+        justify-content: space-around;
+        .icon svg {
+            width: 55px;
+    height: 55px;
+    margin-right: 9px;
+    margin-left: 9px;
+        }
+     
+    }
+    &__mobileCall {
+        padding-top: 11px;
+        position: absolute;
+        width: 100vw;
+        height: 33vh;
+        z-index: 50;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(180deg, #000000 0%, rgba(203, 202, 202, 0) 100%);
+        font-weight: 700;
+        color: #fff;
+        span {
+            text-transform: uppercase;
+        font-size: 28px;
+        }
+        .greenBtn {
+            width: 190px;
+            height: 40px;
+            background-color: #25D366;
+        }
         display: flex;
         flex-direction: column;
-        &__title {
-            text-align: center;
-            font-size: 32px;
-            text-transform: uppercase;
-            color: rgba(0, 133, 255, 1);
-        }
-        &__btn {
-            color: #E9E9E9;
-            font-size: 18px;
-            font-weight: 700;
-            width: 50%;
-            margin: 0 auto;
-            padding: 10px 0;
-            box-shadow: -6px 2px 8px 6px rgba(0, 0, 0, 0.25);
-        }
+        justify-content: start;
+        align-items: center;
+        
+    
     }
-    .promo-grid__imgFront {
-        svg {
-            width: 18px;
-        }
-    }
-    //PROMO END
+
+   
+}
+ //PROMO END
+
+   
     .about-descr__video iframe {
         border-radius: 0;
     }
