@@ -375,6 +375,10 @@
     //header end
 
 //promo start
+.promo .owl-carousel {
+    display: block !important;
+}
+
 .promo {
     position: relative;
     .container {
@@ -422,6 +426,7 @@
         padding: 45px 12px;
         align-items: center;
         justify-content: space-around;
+        margin-top: 70px;
         .icon svg {
             width: 55px;
     height: 55px;
@@ -460,6 +465,8 @@
 
    
 }
+
+
  //PROMO END
 
    
@@ -814,6 +821,13 @@ border-radius: 15px;
             grid-row-end: 2;
             width: 100%;
         }
+    }
+
+    .install .container {
+        padding-top: 80px;
+    }
+    .install-descr__top li {
+        margin: 0;
     }
 
     //END INSTALl

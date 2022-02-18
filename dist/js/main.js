@@ -30,9 +30,7 @@ $(".owl-carousel").owlCarousel({
   rewind: false,
   dots: true,
   autoplay: true,
-  autoplayTimeout: 7500,
-  pullDrag: false,
-  touchDrag: false
+  autoplayTimeout: 7500
 });
 
 
