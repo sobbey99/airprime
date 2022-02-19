@@ -172,13 +172,6 @@
                 object-fit: cover;
                 transition: 0.3s all ease-in-out;
                 border-radius: 50%;
-                border: 3px solid #41ac58;
-                &_blue {
-                  border: 3px solid #0085ff;
-                }
-                &_purple {
-                  border: 3px solid purple;
-                }
             }
             &_link {
               display: flex;
