@@ -1,5 +1,9 @@
-
-
+function reloadPage() {
+  window.addEventListener(`resize`, () => {
+    location.reload()
+  }, false);
+  
+}
 
 
 
@@ -181,13 +185,12 @@ const itemSection = document.querySelector('.items-section');
 
 if($(window).width() < 992) {
   itemSection.remove();
+  reloadPage();
 }
 
+reloadPage();
 
 
 
 
-window.addEventListener(`resize`, () => {
-  location.reload();
-}, false);
 

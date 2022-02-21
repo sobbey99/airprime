@@ -965,6 +965,7 @@ border-radius: 15px;
 
     /*CATALOG PAGE*/
 
+    //items
     .items {
         background-color: #18191A;
         color: white;
@@ -980,10 +981,35 @@ border-radius: 15px;
         &-mobile {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            padding-top: 20px;
+            &__title {
+                .line {
+                    margin-right: 5px;
+                }
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+            &__product {
+                &_top {
+                    background-color: #fff;
+                }
+                &-bottom{
+                    &-wrapper {
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                        justify-items: center;
+                    }
+                }
+                &_bottom {
+                    background-color: #0085FF;
+                }
+            }
         }
     }
 
+
+    //footer
     .catalogPage footer.footer {
         background-color: #18191A;
         color: white;
