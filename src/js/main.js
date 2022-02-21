@@ -358,6 +358,8 @@ const hamburgerBottom = document.querySelector('.hamburger-menu__bottom');
 const hamburgerRights = document.querySelector('.hamburger-menu__copyright');
 const hamburgerTop = document.querySelector('.hamburger-menu__top');
 const menutag = document.querySelector('.menutag');
+const bodyTag = document.querySelector('body');
+
 
 const navFullPage = document.querySelector('#fp-nav.fp-right');
 const navList = document.querySelectorAll('.hamburger-menu nav.list ul li');
@@ -386,6 +388,7 @@ hamburgerElement.addEventListener('click', function(){
 
 
 
+  bodyTag.classList.add('overflowOff');
 
 
 
@@ -467,6 +470,9 @@ hamburgerClose.addEventListener('click', function(){
   hamburgerClose.classList.remove('animate__delay-4s');
   hamburgerClose.classList.remove('animate__bounceIn');
   hamburgerClose.classList.remove('animate__faster');
+
+  bodyTag.classList.remove('overflowOff');
+
 });
 
 

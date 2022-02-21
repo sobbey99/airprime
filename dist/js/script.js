@@ -12,14 +12,17 @@ function reloadPage() {
 /*
 Loader
 */
+const bodyTag = document.querySelector('body');
 const maskLoad = document.querySelector('.loading');
 window.addEventListener('load', () => {
   setTimeout(() => {
+
     maskLoad.classList.add('hide');
   } , 1200);
 
   setTimeout(
     () => {
+      bodyTag.classList.remove('overflowOff');
       maskLoad.remove();
     }, 1200
   );
@@ -69,6 +72,7 @@ const hamburgerTop = document.querySelector('.hamburger-menu__top');
 const menutag = document.querySelector('.menutag');
 
 
+
 const navList = document.querySelectorAll('.hamburger-menu nav.list ul li');
 
 
@@ -92,6 +96,7 @@ hamburgerElement.addEventListener('click', function(){
   hamburgerClose.classList.add('animate__zoomIn');
   hamburgerClose.classList.add('animate__faster');
 
+  bodyTag.classList.add('overflowOff');
 
 
 
@@ -145,7 +150,7 @@ hamburgerClose.addEventListener('click', function(){
 
     }
   );
-  
+  bodyTag.classList.remove('overflowOff');
   hamburgerBottom.classList.remove('liOnGrid');
   hamburgerBottom.classList.remove('animate__animated');
   hamburgerBottom.classList.remove('animate__fadeInUpBig');
@@ -183,12 +188,23 @@ hamburgerClose.addEventListener('click', function(){
 
 const itemSection = document.querySelector('.items-section');
 
+
 if($(window).width() < 992) {
   itemSection.remove();
   reloadPage();
+
 }
 
 reloadPage();
+
+$(document).ready(function(){
+  $(".items-mobile__slider").owlCarousel({
+    items: 1,
+    center: true,
+    dots: false,
+    nav: true
+  });
+});
 
 
 
